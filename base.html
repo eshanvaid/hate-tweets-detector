@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{%block head%}{%endblock%} </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+       <!--<script type="text/javascript" src="code.js"></script>*/-->
+    </head>
+    <style>
+        .App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+    background: rgba(0, 0, 0, 0.801);
+    overflow-y: scroll;
+}
+
+.searched-stack{
+  display: flex;
+  padding: 6rem;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.loding-stack{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.29);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(13.7px);
+-webkit-backdrop-filter: blur(13.7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+width: 100%;
+}
+
+input[type=text]{
+  background:white;
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: inset 2px wheat 2px 2px 2px;
+  width: 40vw;
+}
+
+input:focus-visible {
+  background:white;
+  outline: none;
+}
+
+.back-button{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: transparent;
+  border: 0px;
+  padding: 0rem 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color:rgba(255, 4, 4, 0.989);
+  transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover{
+  color: aqua;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.string{
+  font-weight: 600;
+  background-image: radial-gradient(ellipse, #cf2121, #082bd8);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 3rem;
+}
+
+.string-container{
+  background-color: #2ad8adbe;
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  width: max-content;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: start;
+}
+
+.info > *{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  align-items: center;
+  gap: 2vh;
+}
+
+.info > * > *{
+  display: flex;
+}
+
+.info > * > *:first-child{
+  flex:2;
+  justify-content: flex-end;
+}
+
+.info > * > *:last-child{
+  flex:5;
+  overflow-y: auto;
+  background-color: rgba(245, 222, 179, 0.402);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: revert !important;
+}
+
+.list > * {
+  padding: 0.5rem ;
+}
+
+.percentage{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: aliceblue;
+}
+
+    </style>
+    <body>
+          {%block body%}{%endblock%}
+    </body>

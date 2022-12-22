@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+
+{%block head%}
+{{searchString}}
+{%endblock%} 
+
+{%block body%}
+<div class="App">
+  <div class="searched-stack">
+    <div class="loding-stack">
+      <div class='info'>
+        <div>
+          <h2>Name:</h2>
+          <div>{{searchString}}</div>
+        </div>
+        <div>
+          <h2>Recent Tweets:</h2>
+          <ul class='list'>
+            {% for tweets in recentTweets %}
+                <li>
+                  {{tweets}}
+                </li>
+            {%endfor%}
+          </ul>
+        </div>
+        <div>
+          <h2>Probability of being hate spreader:</h2>
+          <div class='percentage'>
+          {{probability}}%
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%} 
